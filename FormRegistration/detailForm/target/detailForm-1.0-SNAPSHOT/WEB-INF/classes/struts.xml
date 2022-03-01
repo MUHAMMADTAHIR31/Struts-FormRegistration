@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts> 
+    <constant name="struts.devMode" value="true" />
+    <package name="default" extends="struts-default" namespace="/">  
+        
+        <action name="studentDetail" 
+         class="pojo.StudentDetail" method="display">
+		<result name="none">index.jsp</result>
+        </action>
+        
+        <action name="resultAction" class="pojo.StudentDetail" method="execute">  
+            <result name="success">/submit.jsp</result>  
+        </action>  
+        
+    </package>  
+</struts>    
